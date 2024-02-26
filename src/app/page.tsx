@@ -1,3 +1,5 @@
+'use client';
+
 import { CardHeader } from '@/components/Card/CardHeader';
 import { Container } from '@/components/Container';
 import { Sidebar } from '@/components/Sidebar';
