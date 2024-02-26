@@ -23,7 +23,7 @@ export function StepNavigation({
 }: Readonly<MobileStepNavigationProps>) {
   const router = useRouter();
   const windowWidth = useWindowSize().width;
-  if (!windowWidth) return;
+  const isMobile = windowWidth && windowWidth < 768;
 
   const handleConfirm = async () => {
     toast.promise(new Promise((resolve) => setTimeout(resolve, 1500)), {
@@ -38,7 +38,7 @@ export function StepNavigation({
   return (
     <section
       className={cn(
-        windowWidth < 768
+        isMobile
           ? 'bg-white left-0 absolute bottom-0 md:hidden'
           : 'absolute bottom-40 left-0',
         'flex p-4 w-full justify-between items-center md:px-0',
