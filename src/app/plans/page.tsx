@@ -22,7 +22,7 @@ export default function Plans({
 
   const handleSubmit = () => {
     setState({ ...state, plan, option });
-    router.replace(`/addons`);
+    router.push(`/addons`);
   };
 
   return (

@@ -14,7 +14,6 @@ interface FormDataSchema extends z.infer<typeof formSchema> {}
 
 export function Form() {
   const [state, setState] = useAppState() as [AppState, SetAppState];
-
   const searchParams = useSearchParams();
   const plan = searchParams.get('plan');
   const option = searchParams.get('option');

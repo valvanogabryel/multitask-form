@@ -21,14 +21,14 @@ export function Fieldset({
         register={register}
         name="name"
         placeholder="John Doe"
-        error={errors}
+        error={errors ?? ''}
       />
       <Input
         label="Endereço de email"
         register={register}
         name="email"
         placeholder="johndoe@lorem.com"
-        error={errors}
+        error={errors ?? ''}
       />
       <Input
         label="Número de telefone"
@@ -37,7 +37,7 @@ export function Fieldset({
         {...register('phone', {
           onChange: (e) => formatPhone(e, setValue),
         })}
-        error={errors}
+        error={errors ?? ''}
       />
     </fieldset>
   );
