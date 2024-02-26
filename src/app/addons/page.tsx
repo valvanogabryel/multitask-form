@@ -15,7 +15,7 @@ export default function Addons() {
   const [state] = useAppState() as [AppState, SetAppState];
 
   const handleSubmit = () => {
-    router.replace(`/finishing-up`);
+    router.push(`/finishing-up`);
   };
 
   return (

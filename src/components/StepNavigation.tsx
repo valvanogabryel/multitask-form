@@ -1,3 +1,5 @@
+'use client';
+
 import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
