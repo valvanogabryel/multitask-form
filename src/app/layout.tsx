@@ -23,7 +23,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.png" type="image/png" sizes="any" />
       </head>
       <body
-        className={`${ubuntu.className} flex justify-center items-center w-full bg-magnolia h-screen overflow-hidden relative antialiased`}
+        className={`${ubuntu.className} flex justify-center items-center w-full bg-magnolia h-screen overflow-x-hidden relative antialiased`}
       >
         <Providers>{children}</Providers>
       </body>

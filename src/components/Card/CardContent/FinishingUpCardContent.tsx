@@ -20,6 +20,8 @@ export function FinishingUpCardContent() {
     return;
   }
 
+  
+
   const getTotalCost = (): number => {
     const planCost = getPriceForPlan(state.plan as string, state.option);
     const servicesCost = state.services.reduce(

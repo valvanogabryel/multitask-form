@@ -40,7 +40,7 @@ export function StepNavigation({
       className={cn(
         windowWidth < 768
           ? 'bg-white left-0 absolute bottom-0 md:hidden'
-          : 'absolute bottom-0 left-0',
+          : 'absolute bottom-40 left-0',
         'flex p-4 w-full justify-between items-center md:px-0',
         props.className
       )}
