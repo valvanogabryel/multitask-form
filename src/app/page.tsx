@@ -2,6 +2,7 @@ import { CardHeader } from '@/components/Card/CardHeader';
 import { Container } from '@/components/Container';
 import { Sidebar } from '@/components/Sidebar';
 import { Form } from '@/components/Form';
+import { Suspense } from 'react';
 
 export default function PersonalInfo() {
   return (
@@ -15,7 +16,9 @@ export default function PersonalInfo() {
           description="Por favor, forneça seu nome, email e número de telefone."
         />
 
-        <Form />
+        <Suspense fallback={<div>Carregando...</div>}>
+          <Form />
+        </Suspense>
       </section>
     </Container>
   );

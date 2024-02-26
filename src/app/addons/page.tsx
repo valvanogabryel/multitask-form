@@ -33,7 +33,6 @@ export default function Addons() {
 
         <StepNavigation
           onSubmit={handleSubmit}
-          router={router}
           toPath={`/plans?plan=${state.plan}&option=${state.option}`}
           step={3}
         />

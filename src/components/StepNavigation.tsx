@@ -2,14 +2,13 @@
 
 import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
-import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 import { ComponentProps } from 'react';
 import { Button } from './ui/button';
 import { useWindowSize } from '@/hooks/useWindowSize';
+import { useRouter } from 'next/navigation';
 
 interface MobileStepNavigationProps extends ComponentProps<'section'> {
   onSubmit?: () => void;
-  router?: AppRouterInstance;
   toPath: string;
   step: number;
   confirm?: boolean;
@@ -17,12 +16,12 @@ interface MobileStepNavigationProps extends ComponentProps<'section'> {
 
 export function StepNavigation({
   onSubmit,
-  router,
   toPath,
   step,
   confirm = false,
   ...props
 }: Readonly<MobileStepNavigationProps>) {
+  const router = useRouter();
   const windowWidth = useWindowSize().width;
   if (!windowWidth) return;
 

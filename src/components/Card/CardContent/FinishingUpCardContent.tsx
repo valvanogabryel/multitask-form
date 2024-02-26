@@ -1,3 +1,5 @@
+'use client';
+
 import { Separator } from '@/components/ui/separator';
 import { useAppState } from '@/context/state';
 import { capitalizeFirstLetter } from '@/utils/capitalizeFirstLetter';
@@ -8,13 +10,13 @@ import _ from 'lodash';
 import AppState, { SetAppState } from '@/interfaces/AppState';
 
 export function FinishingUpCardContent() {
-  const [state] = useAppState() as [AppState, SetAppState];
   const router = useRouter();
+  const [state] = useAppState() as [AppState, SetAppState];
 
   const billingCycleLabel = state.option === 'monthly' ? 'mês' : 'ano';
 
   if (_.isEmpty(state)) {
-    router.replace(`/`);
+    if (typeof window !== 'undefined') router.replace('/');
     return;
   }
 

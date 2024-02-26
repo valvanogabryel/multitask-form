@@ -6,11 +6,8 @@ import { CardWrapper } from '@/components/Card/ui/card-wrapper';
 import { CardHeader } from '@/components/Card/CardHeader';
 import { CardContent } from '@/components/Card/CardContent';
 import { StepNavigation } from '@/components/StepNavigation';
-import { useRouter } from 'next/navigation';
 
 export default function Finishing() {
-  const router = useRouter();
-
   return (
     <Container>
       <Sidebar.Mobile currentStep={4} />
@@ -23,7 +20,7 @@ export default function Finishing() {
         />
 
         <CardContent.FinishingUp />
-        <StepNavigation toPath="/addons" step={4} confirm router={router} />
+        <StepNavigation toPath="/addons" step={4} confirm />
       </CardWrapper>
     </Container>
   );

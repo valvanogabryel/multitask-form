@@ -40,7 +40,6 @@ export default function Plans({
 
         <StepNavigation
           onSubmit={handleSubmit}
-          router={router}
           toPath={`/?plan=${plan}&option=${option}`}
           step={2}
         />
